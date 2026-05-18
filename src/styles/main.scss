@@ -1,0 +1,27 @@
+@import 'variables';
+
+// Reset de base
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif; // Kasa utilise Montserrat
+  -webkit-font-smoothing: antialiased;
+}
+
+// Structure globale du site (Centré, max 1240px comme sur Figma)
+.kasa-layout {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.kasa-main-content {
+  flex: 1; // Pousse le footer en bas si la page est vide
+}

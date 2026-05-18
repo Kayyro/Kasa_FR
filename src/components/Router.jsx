@@ -1,16 +1,17 @@
 import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
-//import des pages(Home,About,Hosting,Error)
+import Header from './Header';
+import Footer from './Footer';
 
 const Layout = () => {
-    return (
-        <>
-        {/*<Header/>*/}
-        <main>
-            <Outlet /> {/* ici y'aura les pages*/}
-        </main>
-        {/*<Footer/>*/}
-        </>
-    );
+  return (
+    <div className="kasa-layout">
+      <Header />
+      <main className="kasa-main-content">
+        <Outlet /> {/* Tes pages (Home, About, etc.) s'injectent ici */}
+      </main>
+      <Footer />
+    </div>
+  );
 };
 
 const router = createBrowserRouter([
