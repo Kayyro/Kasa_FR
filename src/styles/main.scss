@@ -1,6 +1,5 @@
 @import 'variables';
 
-// Reset de base
 * {
   box-sizing: border-box;
   margin: 0;
@@ -8,7 +7,7 @@
 }
 
 body {
-  font-family: 'Montserrat', sans-serif; // Kasa utilise Montserrat
+  font-family: 'Montserrat', sans-serif; // potentiellement a changé
   -webkit-font-smoothing: antialiased;
 }
 
@@ -23,5 +22,76 @@ body {
 }
 
 .kasa-main-content {
-  flex: 1; // Pousse le footer en bas si la page est vide
+  flex: 1;
+}
+
+// ==========================================
+// 1. STYLE DU HEADER
+// ==========================================
+.kasa-header {
+  display: flex;
+  justify-content: space-between; // logo à gauche, Nav à droite
+  align-items: center;
+  padding: 20px 0;
+
+  &__logo {
+    height: 68px;
+    @media (max-width: $breakpoint-mobile) {
+      height: 47px;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    gap: 50px;
+    
+    @media (max-width: $breakpoint-mobile) {
+      gap: 20px;
+    }
+  }
+
+  &__link {
+    color: $color-black;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 500;
+
+    @media (max-width: $breakpoint-mobile) {
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+
+    &--active {
+      text-decoration: underline; // souligne uniquement si on est sur la page active
+    }
+  }
+}
+
+// ==========================================
+// 2. STYLE DU FOOTER
+// ==========================================
+.kasa-footer {
+  background-color: $color-black;
+  color: $color-white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 60px 0;
+  margin-top: 40px;
+
+  &__logo {
+    height: 40px;
+  }
+
+  &__text {
+    font-size: 24px;
+    text-align: center;
+
+    @media (max-width: $breakpoint-mobile) {
+      font-size: 12px;
+      max-width: 130px; // force le retour a la ligne
+    }
+  }
 }
