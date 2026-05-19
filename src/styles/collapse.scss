@@ -1,0 +1,64 @@
+.collapse {
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 20px;
+
+  &__header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $color-primary; // rouge en gros
+    padding: 8px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  &__title {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  &__arrow {
+    color: #fff;
+    font-size: 28px;
+    transition: transform 0.3s ease;
+    display: inline-block;
+    transform: rotate(0deg);
+  }
+
+  &__body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background-color: #f6f6f6;
+    border-radius: 0 0 5px 5px;
+    padding: 0 20px;
+    color: #000;
+    font-size: 18px;
+  }
+
+  // quand j'ouvre
+  &--open {
+    .collapse__arrow {
+      transform: rotate(180deg);
+    }
+
+    .collapse__body {
+      max-height: 300px;
+      padding: 20px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    &__title {
+      font-size: 13px;
+    }
+
+    &__body {
+      font-size: 13px;
+    }
+  }
+}
