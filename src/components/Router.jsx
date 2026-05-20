@@ -3,6 +3,7 @@ import Header from './Header';
 import Footer from './Footer';
 import Home from '../pages/Home';
 import Error from '../pages/Error';
+import Logement from '../pages/Logement';
 
 const Layout = () => {
   return (
@@ -32,7 +33,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/logement/:id",
-        element: <div>Détail du logement</div>, // a remplacer par <Housing />
+        element: <Logement />, // a remplacer par <Housing />
       }
     ]
   }

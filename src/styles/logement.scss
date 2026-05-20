@@ -1,0 +1,103 @@
+.logement {
+  padding-bottom: 40px;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    font-size: 36px;
+    font-weight: 500;
+    color: $color-primary;
+    margin-bottom: 10px;
+  }
+
+  &__location {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  &__tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  &__tag {
+    background-color: $color-primary;
+    color: #fff;
+    border-radius: 10px;
+    padding: 5px 20px;
+    font-size: 14px;
+  }
+
+  &__host {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  &__host-name {
+    font-size: 18px;
+    color: $color-primary;
+    text-align: right;
+    max-width: 100px;
+  }
+
+  &__host-img {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  &__rating {
+    display: flex;
+    gap: 5px;
+    justify-content: flex-end;
+    margin-bottom: 25px;
+  }
+
+  &__star {
+    font-size: 30px;
+    color: #e3e3e3;
+
+    &--active {
+      color: $color-primary;
+    }
+  }
+
+  &__collapses {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    &__header {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    &__title {
+      font-size: 22px;
+    }
+
+    &__host {
+      flex-direction: row-reverse;
+      width: 100%;
+      justify-content: flex-end;
+    }
+
+    &__rating {
+      justify-content: flex-start;
+    }
+
+    &__star {
+      font-size: 20px;
+    }
+  }
+}
