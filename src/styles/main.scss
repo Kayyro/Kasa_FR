@@ -24,10 +24,14 @@ body {
 .kasa-layout {
   max-width: 1240px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 100px; // 👈 desktop
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+
+  @media (max-width: $breakpoint-mobile) {
+    padding: 0 20px; // 👈 mobile
+  }
 }
 
 .kasa-main-content {
