@@ -4,13 +4,14 @@ import Footer from './Footer';
 import Home from '../pages/Home';
 import Error from '../pages/Error';
 import Logement from '../pages/Logement';
+import About from '../pages/About';
 
 const Layout = () => {
   return (
     <div className="kasa-layout">
       <Header />
       <main className="kasa-main-content">
-        <Outlet /> {/* Tes pages (Home, About, etc.) s'injectent ici */}
+        <Outlet /> {}
       </main>
       <Footer />
     </div>
@@ -21,19 +22,19 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
-    errorElement: <Error>Page 404 (Erreur)</Error>, // a remplacer par mon composent errorerrorElement: <Error />
+    errorElement: <Error>Page 404 (Erreur)</Error>,
     children: [
       {
         path: "/",
-        element: <Home>Page d'accueil (Home)</Home>, // a remplacer <Home />
+        element: <Home>Page d'accueil (Home)</Home>,
       },
       {
         path: "/about",
-        element: <div>À Propos (About)</div>, // a remplacer par <About />
+        element: <About>À Propos (About)</About>,
       },
       {
         path: "/logement/:id",
-        element: <Logement />, // a remplacer par <Housing />
+        element: <Logement />,
       }
     ]
   }
