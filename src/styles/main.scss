@@ -17,6 +17,7 @@
 body {
   font-family: 'Montserrat', sans-serif; // potentiellement a changé
   -webkit-font-smoothing: antialiased;
+  background-color: #fff;
 }
 
 // Structure globale du site (Centré, max 1240px comme sur Figma)
@@ -43,7 +44,7 @@ body {
   padding: 20px 0;
 
   &__logo {
-    height: 68px;
+    height: 45px;
     @media (max-width: $breakpoint-mobile) {
       height: 47px;
     }
