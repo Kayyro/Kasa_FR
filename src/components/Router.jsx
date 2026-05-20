@@ -8,15 +8,17 @@ import About from '../pages/About';
 
 const Layout = () => {
   return (
-    <div className="kasa-layout">
-      <Header />
-      <main className="kasa-main-content">
-        <Outlet /> {}
-      </main>
+    <>
+      <div className="kasa-layout">
+        <Header />
+        <main className="kasa-main-content">
+          <Outlet />
+        </main>
+      </div>
       <Footer />
-    </div>
-  );
-};
+    </>
+  )
+}
 
 const router = createBrowserRouter([
   {
