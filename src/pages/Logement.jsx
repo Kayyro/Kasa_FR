@@ -21,7 +21,7 @@ function Logement() {
     </span>
   ))
 
-  return (
+return (
     <div className="logement">
       <Slideshow images={logement.pictures} />
 
@@ -36,20 +36,24 @@ function Logement() {
           </div>
         </div>
 
-        <div className="logement__host">
-          <p className="logement__host-name">{logement.host.name}</p>
-          <img
-            src={logement.host.picture}
-            alt={logement.host.name}
-            className="logement__host-img"
-          />
+        {/* 🎯 LE AGENCEMENT S'ALIGNE ICI : Nouveau conteneur de droite */}
+        <div className="logement__header-right">
+          <div className="logement__host">
+            <p className="logement__host-name">{logement.host.name}</p>
+            <img
+              src={logement.host.picture}
+              alt={logement.host.name}
+              className="logement__host-img"
+            />
+          </div>
+
+          <div className="logement__rating">
+            {stars}
+          </div>
         </div>
       </div>
 
-      <div className="logement__rating">
-        {stars}
-      </div>
-
+      {/* 💻 Les collapses se mettent maintenant directement sous le header */}
       <div className="logement__collapses">
         <Collapse
           title="Description"

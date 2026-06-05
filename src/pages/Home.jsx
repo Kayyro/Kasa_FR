@@ -7,6 +7,7 @@ function Home() {
   return (
     <div className="home">
       <Banner image={bannerHome} alt="Appartements en location">
+        Chez vous, partout et ailleurs
       </Banner>
 
       <section className="home__grid">
