@@ -9,20 +9,20 @@
   }
 
   &__title {
-    font-size: 36px;
-    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    font-weight: 400;
     color: $color-primary;
     margin-bottom: 10px;
     margin-top: 0;
-    display: flex;
   }
 
   &__location {
+    font-family: 'Montserrat', sans-serif;
     font-size: 18px;
-    font-weight: 400;
-    color: black;
+    font-weight: 500;
+    color: #000000;
     margin-bottom: 15px;
-    display: flex;
   }
 
   &__tags {
@@ -30,7 +30,7 @@
     gap: 10px;
     flex-wrap: wrap;
     color: #fff;
-    font-weight: 800;
+    font-weight: 500;
   }
 
   &__tag {
@@ -90,11 +90,10 @@
     flex-direction: row; /* En ligne sur desktop */
     gap: 76px;
     & > * {
-      flex: 1; /* Force le 50% / 50% */
+      flex: 1;
     }
   }
 
-  /* MOBILE RESPONSIVE */
   @media (max-width: $breakpoint-mobile) {
     &__header {
       flex-direction: column;
