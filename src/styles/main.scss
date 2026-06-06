@@ -1,13 +1,17 @@
+// 1. On garde l'import de la police Google Fonts (c'est du CSS natif, ça ne bouge pas)
+
+// 2. 🎯 TUTEUR : Remplacement des @import obsolètes par @use
+@use 'variables' as *; // Le "as *" permet d'utiliser les variables ($breakpoint-mobile, etc.) directement plus bas
+@use 'banner';
+@use 'card';
+@use 'home';
+@use 'collapse';
+@use 'error';
+@use 'slideshow';
+@use 'logement';
+@use 'about';
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
-@import 'variables';
-@import 'banner';
-@import 'card';
-@import 'home';
-@import 'collapse';
-@import 'error';
-@import 'slideshow';
-@import 'logement';
-@import 'about';
 
 * {
   margin: 0;
@@ -16,7 +20,7 @@
 }
 
 body {
-  font-family: 'Montserrat', sans-serif; // potentiellement a changé
+  font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   background-color: #fff;
 }
@@ -25,13 +29,13 @@ body {
 .kasa-layout {
   max-width: 1240px;
   margin: 0 auto;
-  padding: 0 100px; // 👈 desktop
+  padding: 0 100px;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 
   @media (max-width: $breakpoint-mobile) {
-    padding: 0 20px; // 👈 mobile
+    padding: 0 20px;
   }
 }
 
@@ -44,7 +48,7 @@ body {
 // ==========================================
 .kasa-header {
   display: flex;
-  justify-content: space-between; // logo à gauche, Nav à droite
+  justify-content: space-between;
   align-items: center;
   padding: 20px 0;
 
@@ -76,7 +80,7 @@ body {
     }
 
     &--active {
-      text-decoration: underline; // souligne uniquement si on est sur la page active
+      text-decoration: underline;
     }
   }
 }
@@ -105,7 +109,7 @@ body {
 
     @media (max-width: $breakpoint-mobile) {
       font-size: 12px;
-      max-width: 130px; // force le retour a la ligne
+      max-width: 130px;
     }
   }
 }
