@@ -28,11 +28,11 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home>Page d'accueil (Home)</Home>,
+        element: <Home />,
       },
       {
         path: "/about",
-        element: <About>À Propos (About)</About>,
+        element: <About />,
       },
       {
         path: "/logement/:id",
